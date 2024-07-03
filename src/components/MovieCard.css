@@ -1,0 +1,77 @@
+.movie-card {
+    position: relative;
+    width: 300px; /* Increased width */
+    height: 450px; /* Increased height */
+    margin: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover .movie-info {
+    transform: translateY(0);
+  }
+  
+  .rating-container {
+    position: absolute;
+    bottom: 10px; /* Position at bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover .rating-container {
+    opacity: 1;
+  }
+  
+  /* Eye and Cross Icon Styling */
+  .ctrl-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .ctrl-btn:hover {
+    opacity: 0.7;
+  }
+  
